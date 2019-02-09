@@ -44,7 +44,7 @@ public class PersonDaoTest {
         Optional<Person> retrievedPerson = personDao.getById(person.getId());
         Assert.assertTrue(retrievedPerson.isPresent());
 
-        Passport personPassport = retrievedPerson.get().getPassport();
-        Assert.assertEquals(passport.getPassportNumber(), personPassport.getPassportNumber());
+        Passport retrievedPassport = retrievedPerson.get().getPassport();
+        Assert.assertEquals(passport.getPassportNumber(), retrievedPassport.getPassportNumber());
     }
 }
